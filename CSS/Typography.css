@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Aldrich);
+body {
+  font-family: "Aldrich";
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  color: #fff;
+}
+h1 {
+    font-weight: bold;
+}
