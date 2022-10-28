@@ -18,90 +18,95 @@
         <img class="logo-img" src="./Img/Logo.svg" />
       </div>
 
-      <nav class="nav-menu">
-        <ul class="nav-menue">
-          <li class="active nav-items"><a href="">About Us</a></li>
-          <li class="nav-items"><a href="">Why Us?</a></li>
-          <li class="nav-items"><a href="">Learn More</a></li>
-          <li class="nav-items"><a href="">Get in Touch</a></li>
-        </ul>
+      <nav class="navbar__menu">
+        <ul id="MenuItems" class="MenuItemsStyle"></ul>
       </nav>
     </header>
+    <section class="" id="about" data-nav="About Us">
+      <div class="about landing__container">
+        <div class="about-content">
+          <h1 class="about-title">The Code hub</h1>
+          <p class="about-desc">
+            The place where you can find all you desire about coding in one
+            place, it's your distination to start learning!
+          </p>
+        </div>
+        <img src="./Img/about.svg" class="about-img" />
+      </div>
+    </section>
 
-    <section class="about" id="about">
-      <div class="about-content">
-        <h1 class="about-title">The Code hub</h1>
-        <p class="about-desc">
-          The place where you can find all you desire about coding in one place,
-          it's your distination to start learning!
-        </p>
-      </div>
-      <div class="about-img">
-        <img src="./Img/about.svg" />
-      </div>
-    </section>
-    <section class="whyUs">
-      <div class="card">
-        <img class="card-img" src="./Img/reliability.svg" />
-        <h2 class="card-title">Relibilty</h2>
-        <p class="card-prg">
-          Our first principal is Realibilty, which helps us meet the
-          expectations we create.
-        </p>
-        <button class="button">Read More</button>
-      </div>
-      <div class="card">
-        <img class="card-img" src="./Img/learning.svg" />
-        <h2 class="card-title">High Quality</h2>
-        <p class="card-title">
-          All our content is a high quality content from a proffisional team.
-        </p>
-        <button class="button">Read More</button>
-      </div>
-      <div class="card">
-        <img class="card-img" src="./Img/learning2.svg" />
-        <h2 class="card-title">Learning</h2>
-        <p class="card-title">
-          Our team is always learning something new to get better at what they
-          do.
-        </p>
-        <button class="button">Read More</button>
+    <section class="" id="whyUs" data-nav="Why Us?">
+      <div class="whyUs landing__container">
+        <div class="card">
+            <img class="card-img" src="./Img/reliability.svg" />
+            <h2 class="card-title">Relibilty</h2>
+            <p class="card-prg">
+              Our first principal is Realibilty, which helps us meet the
+              expectations we create.
+            </p>
+            <button class="button">Read More</button>
+          </div>
+          <div class="card">
+            <img class="card-img" src="./Img/learning.svg" />
+            <h2 class="card-title">High Quality</h2>
+            <p class="card-title">
+              All our content is a high quality content from a proffisional team.
+            </p>
+            <button class="button">Read More</button>
+          </div>
+          <div class="card">
+            <img class="card-img" src="./Img/learning2.svg" />
+            <h2 class="card-title">Learning</h2>
+            <p class="card-title">
+              Our team is always learning something new to get better at what they
+              do.
+            </p>
+            <button class="button">Read More</button>
+          </div>
       </div>
     </section>
-    <section class="learnMore" id="learnMore">
-      <div class="learn-img">
-        <img class="learn-img" src="./Img/about.svg" />
-      </div>
-      <div class="learn-content">
-        <h2 class="learn-title">Learn More with us!</h2>
-        <p class="learn-prag">
-          Enjoy your learning journy with us, we are here to deliver the highest
-          conent quality
-        </p>
-        <button class="button">Go to Courses</button>
-        <button class="button">Descover More</button>
-      </div>
+
+    <section class="" id="learnMore" data-nav="Learn More">
+      <div class="whyUs landing__container">
+        <div class="learnMore ">
+            <div class="learn-img">
+                <img class="learn-img" src="./Img/about.svg" />
+              </div>
+              <div class="learn-content">
+                <h2 class="learn-title">Learn More with us!</h2>
+                <p class="learn-prag">
+                  Enjoy your learning journy with us, we are here to deliver the highest
+                  conent quality
+                </p>
+                <button class="button">Go to Courses</button>
+                <button class="button">Descover More</button>
+              </div>
+        </div>
     </section>
-    <section class="social-links">
-      <h2>Let us keep in touch!</h2>
-      <div class="social-icon">
-        <a
-          href="https://github.com/AbeerSulaiman/Agatha-Christie-Blog"
-          class="fa fa-facebook"
-        ></a>
-        <a
-          href="https://github.com/AbeerSulaiman/Agatha-Christie-Blog"
-          class="fa fa-twitter"
-        ></a>
-        <a
-          href="https://github.com/AbeerSulaiman/Agatha-Christie-Blog"
-          class="fa fa-linkedin"
-        ></a>
-      </div>
+
+    <section class="" id="social" data-nav="Get in Touch">
+        <div class="social-links landing__container">
+            <h2>Let us keep in touch!</h2>
+            <div class="social-icon">
+              <a
+                href="https://github.com/AbeerSulaiman/Agatha-Christie-Blog"
+                class="fa fa-facebook"
+              ></a>
+              <a
+                href="https://github.com/AbeerSulaiman/Agatha-Christie-Blog"
+                class="fa fa-twitter"
+              ></a>
+              <a
+                href="https://github.com/AbeerSulaiman/Agatha-Christie-Blog"
+                class="fa fa-linkedin"
+              ></a>
+            </div>
+        </div>
     </section>
 
     <footer class="footer">
       <p>Made with <span class="heart">♥</span> by Abeer Albawardi</p>
     </footer>
+    <script defer src="./Js/app.js"></script>
   </body>
 </html>
