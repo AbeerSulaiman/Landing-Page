@@ -8,9 +8,6 @@ body {
   background-repeat: no-repeat;
   height: 100%;
 }
-html {
-  scroll-behavior: smooth;
-}
 .header,
 .about {
   display: flex;
@@ -46,13 +43,13 @@ html {
   text-decoration: none;
 }
 
-.MenuItemsStyle > li a:hover:not(.active) {
+.nav-items:hover:not(.active) {
   transform: translateY(-2px);
 }
-.MenuItemsStyle > li a:focus(.active) {
+.nav-items:focus(.active) {
   border-bottom: 2px solid #fff;
 }
-.MenuItemsStyle > .active {
+.nav-items > .active {
   border-bottom: 2px solid #fff;
 }
 .about-img {
@@ -297,7 +294,7 @@ section.your-active-class .landing__container::after {
   .about > img,
   .learn-img > img {
     order: -1;
-    width: 350px;
+    width: 300px;
   }
   .learn-content {
     margin: 40px;
@@ -313,5 +310,40 @@ section.your-active-class .landing__container::after {
   }
   .navbar__menu {
     background-color: rgba(255, 255, 255, 0.276);
+    width: 100%;
+  }
+  .about-content {
+    margin: 0px 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html,
+  body {
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+  .about > img,
+  .learn-img > img {
+    width: 300px;
+  }
+  .about-content {
+    margin: 30px;
+  }
+  .whyUs {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 500px;
+    margin: 40px;
+  }
+  .learnMore {
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+  }
+  .learn-content {
+    margin: 0px 50px 36px;
   }
 }

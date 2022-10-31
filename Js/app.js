@@ -1,3 +1,4 @@
+// const smoothScroll = document.querySelector("html");
 const navMenu = document.getElementById("MenuItems");
 const landingSections = Array.from(document.querySelectorAll("section"));
 
@@ -14,7 +15,20 @@ function Menu_creator() {
 }
 
 Menu_creator();
+
+window.__forceSmoothScrollPolyfill__ = true;
+// selecting all anchors to add smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach((scrollLink) => {
+  scrollLink.addEventListener("click", function (b) {
+    b.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
 //adding active class based on top of viewport
+
 const isActive = (section) => {
   const { top } = section.getBoundingClientRect();
 
@@ -30,19 +44,17 @@ const offset = (section) => {
   return Math.floor(section.getBoundingClientRect().top);
 };
 
+//adding active menu link class with toggle
+const navLinks = document.querySelectorAll(".nav-items a");
+
+navLinks.forEach((Link) => {
+  Link.addEventListener("click", (e) => {
+    navLinks.forEach((d) => d.classList.remove("active"));
+    e.target.classList.toggle("active");
+    Link.scrollTo({ behavior: "smooth" });
+  });
+});
+
 const notActive = (section) => {
   section.classList.remove("your-active-class");
 };
-//When clicking an item from the navigation menu, the link should scroll to the appropriate section.
-const onMenuScroll = () => {
-  const scroll = document.querySelectorAll(".nav-items a");
-  scroll.forEach((item) => {
-    item.addEventListener("click", () => {
-      for (i = 0; i < landingSections; i++) {
-        landingSections[i].addEventListener("click", sectionScroll(item));
-      }
-    });
-  });
-};
-
-onMenuScroll();
