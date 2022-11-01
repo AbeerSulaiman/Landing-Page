@@ -16,7 +16,16 @@ function Menu_creator() {
 
 Menu_creator();
 
-window.__forceSmoothScrollPolyfill__ = true;
+//adding active menu link class with toggle
+const navLinks = document.querySelectorAll(".nav-items a");
+
+navLinks.forEach((Link) => {
+  Link.addEventListener("click", (e) => {
+    navLinks.forEach((d) => d.classList.remove("active"));
+    e.target.classList.toggle("active");
+  });
+});
+
 // selecting all anchors to add smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach((scrollLink) => {
   scrollLink.addEventListener("click", function (b) {
@@ -28,33 +37,15 @@ document.querySelectorAll('a[href^="#"]').forEach((scrollLink) => {
 });
 
 //adding active class based on top of viewport
-
-const isActive = (section) => {
-  const { top } = section.getBoundingClientRect();
-
-  section.classList.toggle("your-active-class", top >= 0);
-};
-
-const toggleActiveClass = () => {
-  landingSections.forEach(isActive);
-};
-
-document.addEventListener("scroll", toggleActiveClass);
-const offset = (section) => {
-  return Math.floor(section.getBoundingClientRect().top);
-};
-
-//adding active menu link class with toggle
-const navLinks = document.querySelectorAll(".nav-items a");
-
-navLinks.forEach((Link) => {
-  Link.addEventListener("click", (e) => {
-    navLinks.forEach((d) => d.classList.remove("active"));
-    e.target.classList.toggle("active");
-    Link.scrollTo({ behavior: "smooth" });
+window.onscroll = function () {
+  landingSections.forEach(function (sectionActive) {
+    if (
+      sectionActive.getBoundingClientRect().top >= -500 &&
+      sectionActive.getBoundingClientRect().top <= 100
+    ) {
+      sectionActive.classList.add("your-active-class");
+    } else {
+      sectionActive.classList.remove("your-active-class");
+    }
   });
-});
-
-const notActive = (section) => {
-  section.classList.remove("your-active-class");
 };
